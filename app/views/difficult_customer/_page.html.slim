@@ -1,0 +1,42 @@
+- options = difficult_customer_options
+- random_ids = fake_classes_array(5)
+
+css:
+  .#{random_ids[2]} {
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #E81E0E
+  }
+
+  .#{random_ids[3]} {
+    font-size: 4em;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    width: 80%
+  }
+
+  .#{random_ids[4]} {
+    position: relative;
+    float: right;
+    cursor: pointer;
+    padding: 3px;
+    color: white
+  }
+
+div id="#{random_ids[0]}" class="#{random_ids[2]}"
+  div class="#{random_ids[3]}"
+    = options['messages'][2]['message']['text']
+    span id="#{random_ids[1]}" class="#{random_ids[4]}"
+      | &times;
+
+javascript:
+  document.getElementById("#{random_ids[1]}").onclick = function() {
+    document.getElementById("#{random_ids[0]}").style.display = 'none'
+  }
