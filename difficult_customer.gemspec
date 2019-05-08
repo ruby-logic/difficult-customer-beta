@@ -22,10 +22,7 @@ Gem::Specification.new do |s|
                     ]
   s.require_paths = %w[lib]
 
+  s.add_dependency 'bundler', '~> 1.3'
   s.add_dependency 'rails'
-  s.add_development_dependency 'bundler', '~> 1.3'
-  s.add_development_dependency 'rake'
-  s.add_dependency 'slim-rails'
-
-  s.add_development_dependency 'sqlite3'
+  s.add_dependency 'rake'
 end

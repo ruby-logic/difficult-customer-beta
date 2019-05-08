@@ -1,0 +1,47 @@
+<% options = difficult_customer_options %>
+<% random_ids = fake_classes_array(5) %>
+
+<style>
+  .<%= random_ids[2] %> {
+    z-index: 999;
+    position: absolute;
+    background: orange;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 10px;
+    color: black
+  }
+
+  .<%= random_ids[3] %> {
+    position: relative;
+    float: left;
+    padding: 3px
+  }
+
+  .<%= random_ids[4] %> {
+    position: relative;
+    float: right;
+    cursor: pointer;
+    color: white;
+    line-height: 0;
+    padding: 7px;
+    font-size: 3em
+  }
+</style>
+
+<div id="<%= random_ids[0] %>" class="<%= random_ids[2] %>">
+  <span class="<%= random_ids[3] %>">
+    <%= options['messages'][0]['message']['text'] %>
+  </span>
+  <span id="<%= random_ids[1] %>" class="<%= random_ids[4] %>">
+    &times;
+  </span>
+</div>
+
+<script>
+  document.getElementById("<%= random_ids[1] %>").onclick = function() {
+    document.getElementById("<%= random_ids[0] %>").style.display = 'none'
+  }
+</script>
