@@ -1,13 +1,9 @@
 # Rails helper
 module DifficultCustomerHelper
   def difficult_customer
-    render_partial %w[alert modal page].sample
+    render "difficult_customer/#{%w[alert modal page].sample}",
+           options: difficult_customer_options
     # partials_to_render
-    # render_partial 'alert'
-  end
-
-  def difficult_customer_options
-    DifficultCustomer::Config.new.config
   end
 
   def fake_classes_array(array_length, string_length: 8)
@@ -16,8 +12,8 @@ module DifficultCustomerHelper
 
   private
 
-  def render_partial(partial)
-    render "difficult_customer/#{partial}"
+  def difficult_customer_options
+    DifficultCustomer::Config.new.config
   end
 
   def fake_class(string_length: 8)
