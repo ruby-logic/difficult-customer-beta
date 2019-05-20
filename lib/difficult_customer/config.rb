@@ -23,6 +23,5 @@ module DifficultCustomer
         'difficult_customer.yml'
       )
     end
-
   end
 end

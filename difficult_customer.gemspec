@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rubocop', '0.66'
 
-  s.add_dependency 'bundler', '~> 1.3'
-  s.add_dependency 'rails'
-  s.add_dependency 'rake'
+  s.add_runtime_dependency 'bundler', '~> 1.3'
+  s.add_runtime_dependency 'rails'
+  s.add_runtime_dependency 'rake'
 end
