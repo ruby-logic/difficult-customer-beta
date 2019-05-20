@@ -1,42 +1,92 @@
-<% random_ids = random_dom_ids(5) %>
+<% random_ids = random_dom_ids(9) %>
 
 <style>
   .<%= random_ids[2] %> {
-    z-index: 999;
-    position: absolute;
-    background: orange;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: fixed;
+    transform: translate(0,0);
+    width: auto;
     left: 0;
     right: 0;
+    height: auto;
     top: 0;
-    margin: 0;
-    padding: 10px;
-    color: black
+    bottom: 0;
+    z-index: 991;
+    padding: 20px;
+    display: flex
   }
 
   .<%= random_ids[3] %> {
-    position: relative;
-    float: left;
-    padding: 3px
+    display: block;
+    position: absolute;
+    width: auto;
+    left: 0;
+    right: 0;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    z-index: 995;
+    opacity: 0.3;
+    background: #222222;
   }
 
   .<%= random_ids[4] %> {
+    margin-top: -3%;
+    width: 30%;
+    min-height: 150px;
+    height: auto;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
     position: relative;
-    float: right;
-    cursor: pointer;
-    color: white;
-    line-height: 0;
-    padding: 7px;
-    font-size: 3em
+    z-index: 999;
+    background: <%= message['colour'] %>;
+    border: 2px solid #222222;
+    padding: 16px
   }
+
+  .<%= random_ids[5] %> {
+    position: relative
+  }
+
+  .<%= random_ids[6] %> {
+    margin: 1px;
+    padding: 0;
+    line-height: 2
+  }
+
+  .<%= random_ids[7] %> {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 0;
+    font-size: 3em;
+    cursor: pointer
+  }
+
+  .<%= random_ids[8] %> {
+    position: relative;
+    font-size: 2em;
+    padding-top: 20px
+  }
+
 </style>
 
 <div id="<%= random_ids[0] %>" class="<%= random_ids[2] %>">
-  <span class="<%= random_ids[3] %>">
-    <%= options['messages'][0]['message']['text'] %>
-  </span>
-  <span id="<%= random_ids[1] %>" class="<%= random_ids[4] %>">
-    &times;
-  </span>
+  <div class="<%= random_ids[3] %>"></div>
+  <div class="<%= random_ids[4] %>">
+    <div class="<%= random_ids[5] %>">
+      <span class="<%= random_ids[6] %>"></span>
+      <span id="<%= random_ids[1] %>" class="<%= random_ids[7] %>">
+        &times;
+      </span>
+    </div>
+    <span class="<%= random_ids[8] %>">
+      <%= message['text'] %>
+    </span>
+  </div>
 </div>
 
 <script>
