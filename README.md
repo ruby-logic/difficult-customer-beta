@@ -21,5 +21,12 @@ Or install it yourself as:
 $ gem install difficult-customer
 ```
 
+By default, this gem will use config file from example/difficult_customer.yml which contains sample configuration.
+To use your own, use:
+```bash
+$ rails generate difficult_customer:install
+```
+and adjust difficult_customer.yml file from your application's config/ directory.
+
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

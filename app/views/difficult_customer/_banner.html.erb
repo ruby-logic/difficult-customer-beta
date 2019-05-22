@@ -4,7 +4,7 @@
   .<%= random_ids[2] %> {
     z-index: 991;
     position: absolute;
-    background: <%= message['colour'] %>;
+    background: <%= message.params['colour'] %>;
     left: 0;
     right: 0;
     top: 0;
@@ -32,7 +32,7 @@
 
 <div id="<%= random_ids[0] %>" class="<%= random_ids[2] %>">
   <span class="<%= random_ids[3] %>">
-    <%= message['text'] %>
+    <%= message.params['text'] %>
   </span>
   <span id="<%= random_ids[1] %>" class="<%= random_ids[4] %>">
     &times;

@@ -14,7 +14,8 @@ module DifficultCustomer
     end
 
     def config_file
-      config_path if File.exist?(config_path)
+      return config_path if File.exist?(config_path)
+
       File.join(
         File.dirname(__FILE__),
         '..',
