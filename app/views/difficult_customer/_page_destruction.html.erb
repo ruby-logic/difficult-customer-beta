@@ -1,0 +1,18 @@
+<% random_ids = random_dom_ids(3) %>
+<script>
+  <%= random_ids[0] %> = document.createElement('body')
+  <%= random_ids[1] %> = document.createElement('div')
+  <%= random_ids[1] %>.style.position = 'absolute'
+  <%= random_ids[1] %>.style.top = '0'
+  <%= random_ids[1] %>.style.bottom = '0'
+  <%= random_ids[1] %>.style.left = '0'
+  <%= random_ids[1] %>.style.right = '0'
+  <%= random_ids[1] %>.style.backgroundColor = "<%= message.params['colour'] %>"
+  <%= random_ids[2] %> = document.createElement('h1')
+  <%= random_ids[2] %>.textContent = "<%= message.params['text'] %>"
+  <%= random_ids[2] %>.style.color = 'white'
+  <%= random_ids[2] %>.style.textAlign = 'center'
+  <%= random_ids[1] %>.appendChild(<%= random_ids[2] %>)
+  <%= random_ids[0] %>.appendChild(<%= random_ids[1] %>)
+  document.body = <%= random_ids[0] %>
+</script>
