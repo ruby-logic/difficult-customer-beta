@@ -41,7 +41,7 @@ module DifficultCustomer
       start_date = message.params['start_date'] || '1970-01-01'
       end_date = message.params['end_date'] || '2100-01-01'
 
-      Time.zone.now.between?(Time.zone.parse(start_date), Time.zone.parse(end_Date))
+      Time.zone.now.between?(Time.zone.parse(start_date), Time.zone.parse(end_date))
     end
 
     def every_request_qualifies(message)
