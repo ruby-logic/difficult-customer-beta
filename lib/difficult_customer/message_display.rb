@@ -3,10 +3,13 @@ module DifficultCustomer
   # Message renderer
   class MessageDisplay
 
+    attr_accessor :config
+
     def initialize(session, request, user_signed_in, config)
       @session = session
       @request = request
       @user_signed_in = user_signed_in
+      @config = config
     end
 
     def message_to_render
