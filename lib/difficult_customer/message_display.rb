@@ -3,7 +3,7 @@ module DifficultCustomer
   # Message renderer
   class MessageDisplay
 
-    def initialize(session, request, user_signed_in)
+    def initialize(session, request, user_signed_in, config)
       @session = session
       @request = request
       @user_signed_in = user_signed_in
@@ -65,10 +65,5 @@ module DifficultCustomer
     def cast_message(message_params)
       Message.new(message_params['message'])
     end
-
-    def config
-      DifficultCustomer::Config.new.config
-    end
-
   end
 end
