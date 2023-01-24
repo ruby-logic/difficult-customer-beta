@@ -92,7 +92,12 @@
 </div>
 
 <script>
+  document.body.style.position = 'fixed'
+  document.body.style.overflow = 'auto'
+
   document.getElementById("<%= random_ids[1] %>").onclick = function() {
     document.getElementById("<%= random_ids[0] %>").style.display = 'none'
+    document.body.style.position = 'initial'
+    document.body.style.overflow = 'initial'
   }
 </script>
