@@ -8,7 +8,7 @@ module DifficultCustomer
         'priority' => 'low',
         'appearance' => 'banner',
         'position' => 'bottom',
-        'colour' => 'yellow',
+        'color' => 'yellow',
         'text' => 'This gem is not configured properly.',
         'frequency' => 'after-sign-in'
       }
@@ -18,7 +18,7 @@ module DifficultCustomer
       {
         'priority' => 'medium',
         'appearance' => 'alert',
-        'colour' => 'orange',
+        'color' => 'orange',
         'text' => 'This gem is not configured properly.',
         'frequency' => 'every-10-requests'
       }
@@ -28,7 +28,7 @@ module DifficultCustomer
       {
         'priority' => 'high',
         'appearance' => 'page',
-        'colour' => 'red',
+        'color' => 'red',
         'text' => 'This gem is not configured properly.',
         'frequency' => 'every-2-requests'
       }

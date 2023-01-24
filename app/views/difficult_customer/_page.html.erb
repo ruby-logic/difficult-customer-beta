@@ -3,14 +3,14 @@
 <style>
   .<%= random_ids[2] %> {
     position: fixed;
-    z-index: 999;
+    z-index: 10000;
     padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: <%= message.params['colour'] %>
+    background-color: <%= message.params['color'] %>
   }
 
   .<%= random_ids[3] %> {
@@ -26,7 +26,7 @@
     float: right;
     cursor: pointer;
     padding: 3px;
-    color: white
+    color: <%= message.params.fetch('tick_color') { 'white' } %>
   }
 </style>
 

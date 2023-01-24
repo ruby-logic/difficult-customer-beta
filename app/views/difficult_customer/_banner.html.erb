@@ -2,9 +2,9 @@
 
 <style>
   .<%= random_ids[2] %> {
-    z-index: 991;
+    z-index: 9991;
     position: absolute;
-    background: <%= message.params['colour'] %>;
+    background: <%= message.params['color'] %>;
     left: 0;
     right: 0;
     top: 0;
@@ -23,7 +23,7 @@
     position: relative;
     float: right;
     cursor: pointer;
-    color: white;
+    color: <%= message.params.fetch('times_color') { 'white' } %>;
     line-height: 0;
     padding: 7px;
     font-size: 3em
