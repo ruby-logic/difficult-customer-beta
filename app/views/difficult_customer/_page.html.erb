@@ -1,4 +1,4 @@
-<% random_ids = random_dom_ids(5) %>
+<% random_ids = random_dom_ids(6) %>
 
 <style>
   .<%= random_ids[2] %> {
@@ -26,15 +26,21 @@
     float: right;
     cursor: pointer;
     padding: 3px;
-    color: <%= message.params.fetch('tick_color') { 'white' } %>
+    color: <%= message.params.fetch('text-color') { 'white' } %>
+  }
+
+  .<%= random_ids[5] %> {
+    color: <%= message.params.fetch('text-color') { 'white' } %>
   }
 </style>
 
 <div id="<%= random_ids[0] %>" class="<%= random_ids[2] %>">
   <div class="<%= random_ids[3] %>">
-    <%= message.params['text'] %>
     <span id="<%= random_ids[1] %>" class="<%= random_ids[4] %>">
       &times;
+    </span>
+    <span class="<%= random_ids[5] %>">
+      <%= message.params['text'] %>
     </span>
   </div>
 </div>

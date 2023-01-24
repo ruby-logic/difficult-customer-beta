@@ -64,13 +64,14 @@
     line-height: 0;
     font-size: 3em;
     cursor: pointer;
-    color: <%= message.params.fetch('times_color') { 'white' } %>
+    color: <%= message.params.fetch('text-color') { 'white' } %>
   }
 
   .<%= random_ids[8] %> {
     position: relative;
     font-size: 2em;
-    padding-top: 20px
+    padding-top: 20px;
+    color: <%= message.params.fetch('text-color') { 'white' } %>
   }
 
 </style>

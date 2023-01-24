@@ -9,6 +9,7 @@ module DifficultCustomer
         'appearance' => 'banner',
         'position' => 'bottom',
         'color' => 'yellow',
+        'text-color' => 'black',
         'text' => 'This gem is not configured properly.',
         'frequency' => 'after-sign-in'
       }
@@ -20,6 +21,7 @@ module DifficultCustomer
         'appearance' => 'alert',
         'color' => 'orange',
         'text' => 'This gem is not configured properly.',
+        'text-color' => 'white',
         'frequency' => 'every-10-requests'
       }
     end
@@ -30,6 +32,7 @@ module DifficultCustomer
         'appearance' => 'page',
         'color' => 'red',
         'text' => 'This gem is not configured properly.',
+        'text-color' => 'white',
         'frequency' => 'every-2-requests'
       }
     end

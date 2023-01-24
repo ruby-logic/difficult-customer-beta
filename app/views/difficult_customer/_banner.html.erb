@@ -16,14 +16,15 @@
   .<%= random_ids[3] %> {
     position: relative;
     float: left;
-    padding: 3px
+    padding: 3px;
+    color: <%= message.params.fetch('text-color') { 'black' } %>;
   }
 
   .<%= random_ids[4] %> {
     position: relative;
     float: right;
     cursor: pointer;
-    color: <%= message.params.fetch('times_color') { 'white' } %>;
+    color: <%= message.params.fetch('text-color') { 'black' } %>;
     line-height: 0;
     padding: 7px;
     font-size: 3em
